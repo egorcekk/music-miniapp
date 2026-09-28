@@ -129,7 +129,7 @@
   const tg = window.Telegram?.WebApp;
   tg?.ready(); tg?.expand();
 
-  const API_BASE = window.API_BASE || "https://a4287f7633548e.lhr.life";
+  const API_BASE = new URLSearchParams(location.search).get('api') || window.API_BASE || "https://PLACEHOLDER.lhr.life";
 
   const q = document.getElementById("q");
   const view = document.getElementById("view");
